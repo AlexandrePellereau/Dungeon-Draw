@@ -25,6 +25,8 @@ public class CombatManager : MonoBehaviour
     private Deck _deck;
     private Discard _discard;
     private GameObject _player;
+    
+    public Entity playerEntity;
 
     private bool _isPlayerTurn;
     public bool IsPlayerTurn {
@@ -157,6 +159,11 @@ public class CombatManager : MonoBehaviour
         {
             Debug.Log("Battle lost...");
         }
+    }
+    
+    public List<Entity> GetEnemies()
+    {
+        return enemies;
     }
 
 }
